@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galih Prasetyo - AI Engineer CV</title>
+    <meta name="description"
+        content="AI Engineer | LLM & Chatbot Innovator | Full-Stack Developer specializing in Python, FastAPI, and RAG systems">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        python: {
+                            blue: '#306998',
+                            yellow: '#FFD43B',
+                            darkBlue: '#1e3a5f',
+                            lightBlue: '#4B8BBE',
+                        },
+                        dark: {
+                            900: '#0a0a0f',
+                            800: '#12121a',
+                            700: '#1a1a26',
+                            600: '#22222f',
+                        }
+                    },
+                    fontFamily: {
+                        'mono': ['JetBrains Mono', 'monospace'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0f;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #306998;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4B8BBE;
+        }
+
+        /* Animated gradient background */
+        .gradient-bg {
+            background: linear-gradient(135deg, #0a0a0f 0%, #12121a 25%, #1a1a26 50%, #12121a 75%, #0a0a0f 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Python logo animation */
+        .python-logo {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Code typing effect */
+        .typing-effect {
+            overflow: hidden;
+            border-right: 3px solid #FFD43B;
+            white-space: nowrap;
+            animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+
+            0%,
+            100% {
+                width: 0;
+            }
+
+            50%,
+            80% {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: #FFD43B;
+            }
+        }
+
+        /* Glassmorphism card */
+        .glass-card {
+            background: rgba(26, 26, 38, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(48, 105, 152, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 212, 59, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(48, 105, 152, 0.2);
+        }
+
+        /* Skill pill */
+        .skill-pill {
+            background: linear-gradient(135deg, rgba(48, 105, 152, 0.3) 0%, rgba(75, 139, 190, 0.2) 100%);
+            border: 1px solid rgba(48, 105, 152, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .skill-pill:hover {
+            background: linear-gradient(135deg, rgba(255, 212, 59, 0.3) 0%, rgba(255, 212, 59, 0.1) 100%);
+            border-color: #FFD43B;
+            transform: scale(1.05);
+        }
+
+        .skill-pill.primary {
+            background: linear-gradient(135deg, rgba(255, 212, 59, 0.3) 0%, rgba(255, 212, 59, 0.1) 100%);
+            border-color: #FFD43B;
+        }
+
+        /* Timeline */
+        .timeline-line {
+            background: linear-gradient(180deg, #306998 0%, #FFD43B 50%, #306998 100%);
+        }
+
+        /* Section header */
+        .section-header {
+            position: relative;
+        }
+
+        .section-header::before {
+            content: '#';
+            position: absolute;
+            left: -25px;
+            color: #FFD43B;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Code block style */
+        .code-block {
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.9) 0%, rgba(18, 18, 26, 0.9) 100%);
+            border: 1px solid rgba(48, 105, 152, 0.4);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Glow effects */
+        .glow-yellow {
+            text-shadow: 0 0 20px rgba(255, 212, 59, 0.5);
+        }
+
+        .glow-blue {
+            text-shadow: 0 0 20px rgba(48, 105, 152, 0.5);
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            background: linear-gradient(90deg, #306998 0%, #FFD43B 100%);
+            height: 4px;
+            border-radius: 2px;
+            animation: progressGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes progressGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 5px rgba(255, 212, 59, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 15px rgba(255, 212, 59, 0.8);
+            }
+        }
+
+        /* Export button */
+        .export-btn {
+            background: linear-gradient(135deg, #306998 0%, #4B8BBE 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(48, 105, 152, 0.4);
+        }
+
+        .export-btn:hover {
+            background: linear-gradient(135deg, #FFD43B 0%, #ffc107 100%);
+            color: #0a0a0f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 212, 59, 0.4);
+        }
+
+        /* Print styles - preserve dark theme for PDF */
+        @media print {
+
+            .no-print,
+            .particles {
+                display: none !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            body {
+                background: #0a0a0f !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+
+            .gradient-bg {
+                background: #0a0a0f !important;
+                animation: none !important;
+            }
+
+            .glass-card {
+                background: rgba(26, 26, 38, 0.95) !important;
+                border: 1px solid rgba(48, 105, 152, 0.3) !important;
+                box-shadow: none !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+
+            .text-python-yellow {
+                color: #FFD43B !important;
+            }
+
+            .text-python-lightBlue,
+            .text-python-blue {
+                color: #4B8BBE !important;
+            }
+
+            .bg-dark-700,
+            .bg-dark-700\/50 {
+                background-color: #1a1a26 !important;
+            }
+
+            a {
+                text-decoration: none !important;
+            }
+
+            /* Ensure all text is visible */
+            .text-white {
+                color: #ffffff !important;
+            }
+
+            .text-gray-300 {
+                color: #d1d5db !important;
+            }
+
+            .text-gray-400 {
+                color: #9ca3af !important;
+            }
+        }
+
+        /* PDF optimization */
+        @page {
+            size: A4;
+            margin: 8mm;
+        }
+
+        .pdf-optimized {
+            page-break-inside: avoid;
+        }
+
+        /* Class for printing mode */
+        body.printing-pdf .glass-card {
+            background: rgba(26, 26, 38, 0.95) !important;
+        }
+
+        /* Particle effect */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFD43B;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: particleFloat 15s infinite linear;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.3;
+            }
+
+            90% {
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="gradient-bg min-h-screen text-gray-100 font-sans">
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Export Controls -->
+    <div class="fixed top-4 right-4 z-50 no-print">
+        <button id="pdfBtn" onclick="downloadPDF()"
+            class="export-btn px-6 py-3 rounded-xl font-mono font-semibold text-white flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span id="btnText">📄 Download PDF</span>
+        </button>
+    </div>
+
+    <!-- Main CV Container -->
+    <div id="cv-content" class="max-w-5xl mx-auto px-6 py-12 relative z-10">
+
+        <!-- Header Section -->
+        <header class="mb-12 pdf-optimized">
+            <div class="glass-card rounded-3xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <!-- Profile Image with Python Theme -->
+                    <div class="relative">
+                        <div class="w-40 h-40 rounded-2xl overflow-hidden border-4 border-python-yellow shadow-2xl">
+                            <img src="foto.jpeg" alt="Galih Prasetyo - AI Engineer"
+                                class="w-full h-full object-cover object-top">
+                        </div>
+                        <div
+                            class="absolute -bottom-2 -right-2 bg-python-yellow text-dark-900 px-3 py-1 rounded-lg font-mono text-sm font-bold">
+                            289+ 🐍
+                        </div>
+                    </div>
+
+                    <!-- Header Info -->
+                    <div class="flex-1 text-center md:text-left">
+                        <div class="font-mono text-python-yellow text-sm mb-2">
+                            <span class="typing-effect inline-block">from ai_engineer import GalihPrasetyo</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-3 glow-yellow">
+                            <span class="text-python-yellow">Galih</span> <span class="text-white">Prasetyo</span>
+                        </h1>
+                        <h2 class="text-xl md:text-2xl text-python-lightBlue font-semibold mb-4">
+                            AI Engineer & LLM Innovator
+                        </h2>
+                        <div class="code-block rounded-xl p-4 mb-4">
+                            <code class="text-sm">
+                                <span class="text-pink-400">class</span> <span class="text-python-yellow">AIEngineer</span>:<br>
+                                <span class="ml-4 text-gray-400"># Building intelligent systems with Python 🐍</span><br>
+                                <span class="ml-4 text-pink-400">skills</span> = [<span class="text-green-400">"RAG"</span>, <span class="text-green-400">"LLM"</span>, <span class="text-green-400">"FastAPI"</span>, <span class="text-green-400">"Chatbot"</span>]
+                            </code>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
+                            <a href="https://www.linkedin.com/in/pendtiumpraz/" target="_blank"
+                                class="flex items-center gap-2 text-gray-300 hover:text-python-yellow transition-colors">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                                /pendtiumpraz
+                            </a>
+                            <a href="https://github.com/pendtiumpraz" target="_blank"
+                                class="flex items-center gap-2 text-gray-300 hover:text-python-yellow transition-colors">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                289 Repositories
+                            </a>
+                            <span class="flex items-center gap-2 text-gray-300">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                East Java, Indonesia
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="mb-10 pdf-optimized">
+            <div class="glass-card rounded-2xl p-6">
+                <h3 class="section-header text-2xl font-bold text-python-yellow mb-4 ml-6 font-mono">summary()</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Seasoned <span class="text-python-yellow font-semibold">AI Engineer</span> with 8+ years of
+                    experience in technology and creative solutions.
+                    Specialized in building production-ready <span
+                        class="text-python-lightBlue font-semibold">GenAI-based chatbots</span>,
+                    <span class="text-python-lightBlue font-semibold">RAG systems</span>, and <span
+                        class="text-python-lightBlue font-semibold">LLM applications</span>
+                    using Python ecosystem. Proven track record delivering enterprise solutions for Japanese and
+                    Indonesian markets,
+                    including automation platforms serving 150+ companies. Expert in FastAPI, prompt engineering, and
+                    building scalable
+                    AI infrastructure on AWS.
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Skills Section -->
+        <section class="mb-10 pdf-optimized">
+            <div class="glass-card rounded-2xl p-6">
+                <h3 class="section-header text-2xl font-bold text-python-yellow mb-6 ml-6 font-mono">
+                    skills.match(jobdesk)</h3>
+
+                <!-- Primary Skills (Match with Job Description) -->
+                <div class="mb-6">
+                    <h4 class="text-python-lightBlue font-semibold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-python-yellow rounded-full"></span>
+                        Required Skills ✓
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-pill primary px-4 py-2 rounded-full text-sm font-semibold text-python-yellow">Python
+                            🐍</span>
+                        <span
+                            class="skill-pill primary px-4 py-2 rounded-full text-sm font-semibold text-python-yellow">RAG
+                            (Retrieval-Augmented Generation)</span>
+                        <span
+                            class="skill-pill primary px-4 py-2 rounded-full text-sm font-semibold text-python-yellow">FastAPI</span>
+                        <span
+                            class="skill-pill primary px-4 py-2 rounded-full text-sm font-semibold text-python-yellow">OpenAPI</span>
+                        <span
+                            class="skill-pill primary px-4 py-2 rounded-full text-sm font-semibold text-python-yellow">LLM
+                            (GPT-4o, DeepSeek)</span>
+                        <span
+                            class="skill-pill primary px-4 py-2 rounded-full text-sm font-semibold text-python-yellow">Embedding
+                            Models</span>
+                        <span
+                            class="skill-pill primary px-4 py-2 rounded-full text-sm font-semibold text-python-yellow">Chatbot
+                            Development</span>
+                    </div>
+                </div>
+
+                <!-- AI & ML -->
+                <div class="mb-6">
+                    <h4 class="text-python-lightBlue font-semibold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-python-blue rounded-full"></span>
+                        AI & Machine Learning
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Prompt Engineering</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">AI Agents</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">DIFY.ai</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">MCP (Model Context
+                            Protocol)</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">VLM & OCR</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Workflow Automation</span>
+                    </div>
+                </div>
+
+                <!-- Backend & Infrastructure -->
+                <div class="mb-6">
+                    <h4 class="text-python-lightBlue font-semibold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-python-blue rounded-full"></span>
+                        Backend & Infrastructure
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">PostgreSQL</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">GraphQL</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">AWS (Batch, S3, Lambda,
+                            EC2)</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Docker</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Playwright</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Webhooks</span>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div>
+                    <h4 class="text-python-lightBlue font-semibold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-python-blue rounded-full"></span>
+                        Frontend & Tools
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">React TypeScript</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Next.js</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Laravel</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Tailwind CSS</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Grafana</span>
+                        <span class="skill-pill px-4 py-2 rounded-full text-sm text-gray-200">Jira & Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="mb-10 pdf-optimized">
+            <div class="glass-card rounded-2xl p-6">
+                <h3 class="section-header text-2xl font-bold text-python-yellow mb-6 ml-6 font-mono">experience.recent()
+                </h3>
+
+                <div class="space-y-8">
+                    <!-- Experience 1 -->
+                    <div class="relative pl-8 border-l-2 border-python-blue">
+                        <div
+                            class="absolute -left-2.5 top-0 w-5 h-5 bg-python-yellow rounded-full border-4 border-dark-800">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h4 class="text-xl font-bold text-white">Full Stack Developer & AI Engineer</h4>
+                            <span class="text-python-yellow font-mono text-sm">Aug 2025 - Oct 2025</span>
+                        </div>
+                        <p class="text-python-lightBlue font-semibold mb-2">PT. Hama Smart Solution · Remote</p>
+                        <ul class="text-gray-300 text-sm space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Built <strong>WebRPA automation platform</strong> serving 150+ Japanese companies using
+                                Playwright, FastAPI, and React TypeScript
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Engineered scalable <strong>AWS infrastructure</strong> (Batch, S3, Lambda) with /19 IP
+                                range for high-volume automation
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Developed <strong>AI-powered scenario validation</strong> using DeepSeek for intelligent
+                                form filling
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">Python</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">FastAPI</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">AWS</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">Playwright</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">GraphQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="relative pl-8 border-l-2 border-python-blue">
+                        <div
+                            class="absolute -left-2.5 top-0 w-5 h-5 bg-python-yellow rounded-full border-4 border-dark-800">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h4 class="text-xl font-bold text-white">AI Engineer & Prompt Engineer</h4>
+                            <span class="text-python-yellow font-mono text-sm">May 2025 - Aug 2025</span>
+                        </div>
+                        <p class="text-python-lightBlue font-semibold mb-2">PT. AICORE Network Solution · On-site</p>
+                        <ul class="text-gray-300 text-sm space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Engineered <strong>LINE Bot with GPT-4o VLM</strong> for Japan's renovation market -
+                                generates 200-500 row CSV estimates in 60 seconds
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Built <strong>AI Workflow Generator</strong> translating natural language/images to
+                                complex automations (n8n-style)
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Developed <strong>MCP Server</strong> for Opsguide.cloud platform integration with AI
+                                assistants
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">GPT-4o</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">Prompt
+                                Engineering</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">DIFY.ai</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">FastAPI</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">MCP</span>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="relative pl-8 border-l-2 border-python-blue">
+                        <div
+                            class="absolute -left-2.5 top-0 w-5 h-5 bg-python-yellow rounded-full border-4 border-dark-800">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h4 class="text-xl font-bold text-white">Product & Curriculum Development + Full-Stack
+                                Developer</h4>
+                            <span class="text-python-yellow font-mono text-sm">Apr 2025 - Aug 2025</span>
+                        </div>
+                        <p class="text-python-lightBlue font-semibold mb-2">Coding First · On-site</p>
+                        <ul class="text-gray-300 text-sm space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Built complete <strong>LMS with Laravel 12</strong>, featuring RBAC for 6 roles (Admin,
+                                Teacher, Finance, Parent, Student)
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Automated education systems using <strong>RAG and AI Agents</strong> for curriculum
+                                generation
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Created <strong>AI-powered PPT Generator</strong> and automated e-book creation systems
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">Python</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">RAG</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">AI Agents</span>
+                            <span class="text-xs bg-dark-700 px-2 py-1 rounded text-python-yellow">Laravel</span>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4 -->
+                    <div class="relative pl-8 border-l-2 border-python-blue">
+                        <div
+                            class="absolute -left-2.5 top-0 w-5 h-5 bg-python-blue rounded-full border-4 border-dark-800">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h4 class="text-xl font-bold text-white">Creative Director & Chief AI Engineer</h4>
+                            <span class="text-python-yellow font-mono text-sm">Apr 2022 - Present</span>
+                        </div>
+                        <p class="text-python-lightBlue font-semibold mb-2">Sainskerta Solusi Nusantara · Self-employed
+                        </p>
+                        <ul class="text-gray-300 text-sm space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Leading AI-powered automation and digital solutions company
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-python-yellow mt-1">▸</span>
+                                Developing innovative AI applications across multiple industries
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Projects -->
+        <section class="mb-10 pdf-optimized">
+            <div class="glass-card rounded-2xl p-6">
+                <h3 class="section-header text-2xl font-bold text-python-yellow mb-6 ml-6 font-mono">
+                    projects.highlight()</h3>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Project 1 -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-5 border border-python-blue/30 hover:border-python-yellow/50 transition-colors">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-python-yellow/20 rounded-lg flex items-center justify-center">
+                                <span class="text-lg">🤖</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">WebRPA Automation Platform</h4>
+                                <span class="text-xs text-python-lightBlue">150+ Companies</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3">High-performance web automation for Japanese market
+                            contact form outreach using AI-powered scenario generation.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">FastAPI</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">Playwright</span>
+                            <span class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">AWS</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-5 border border-python-blue/30 hover:border-python-yellow/50 transition-colors">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-python-yellow/20 rounded-lg flex items-center justify-center">
+                                <span class="text-lg">💬</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">LINE Bot Cost Estimator</h4>
+                                <span class="text-xs text-python-lightBlue">GPT-4o VLM</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3">AI chatbot analyzing architectural images to generate
+                            200-500 row renovation cost estimates in under 60 seconds.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">GPT-4o</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">DIFY.ai</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">Webhook</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-5 border border-python-blue/30 hover:border-python-yellow/50 transition-colors">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-python-yellow/20 rounded-lg flex items-center justify-center">
+                                <span class="text-lg">⚡</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">AI Workflow Generator</h4>
+                                <span class="text-xs text-python-lightBlue">Opsguide.cloud</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3">Generative AI translating natural language/images into
+                            complex visual workflows with Interview Agent feature.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">GPT-4o</span>
+                            <span class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">MCP</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">FastAPI</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-5 border border-python-blue/30 hover:border-python-yellow/50 transition-colors">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-python-yellow/20 rounded-lg flex items-center justify-center">
+                                <span class="text-lg">📚</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">AI-Powered LMS Platform</h4>
+                                <span class="text-xs text-python-lightBlue">Coding First</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3">Full-stack LMS with 6-role RBAC, 15+ table database, and
+                            AI-automated curriculum generation.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">Laravel
+                                12</span>
+                            <span class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">RAG</span>
+                            <span class="text-xs bg-python-blue/20 px-2 py-1 rounded text-python-lightBlue">AI
+                                Agents</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Portfolio Section -->
+        <section class="mb-10 pdf-optimized">
+            <div class="glass-card rounded-2xl p-6">
+                <h3 class="section-header text-2xl font-bold text-python-yellow mb-6 ml-6 font-mono">
+                    portfolio.github()</h3>
+
+                <p class="text-gray-400 mb-6 text-sm">Personal projects showcasing AI/ML expertise - all deployed and
+                    live on Vercel</p>
+
+                <!-- AI Projects Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+
+                    <!-- ILMUNA - Islamic AI -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-4 border border-python-blue/30 hover:border-python-yellow/50 transition-all hover:transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">🕌</span>
+                            <h4 class="font-bold text-white text-sm">ILMUNA - Islamic AI</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3">Platform pendidikan Islam berbasis AI dengan 36+ modul
+                            pembelajaran Al-Quran, Hadits, Fiqih & Hafidz Mode.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Next.js</span>
+                            <span class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Gemini
+                                AI</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">TypeScript</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://ilmuna.vercel.app" target="_blank"
+                                class="text-xs text-python-yellow hover:underline">🔗 Demo</a>
+                            <a href="https://github.com/pendtiumpraz/islamic-ai" target="_blank"
+                                class="text-xs text-gray-400 hover:text-white">📁 Code</a>
+                        </div>
+                    </div>
+
+                    <!-- MODO Creator Verse - IP AI -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-4 border border-python-blue/30 hover:border-python-yellow/50 transition-all hover:transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">🎬</span>
+                            <h4 class="font-bold text-white text-sm">MODO Creator Verse</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3">SaaS platform untuk IP lifecycle - AI content creation,
+                            investment, streaming, licensing & fandom management.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Next.js</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Multi-AI</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">PostgreSQL</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://ip-ai.vercel.app" target="_blank"
+                                class="text-xs text-python-yellow hover:underline">🔗 Demo</a>
+                            <a href="https://github.com/pendtiumpraz/ecosystem-IP-ai" target="_blank"
+                                class="text-xs text-gray-400 hover:text-white">📁 Code</a>
+                        </div>
+                    </div>
+
+                    <!-- AI Learning Platform -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-4 border border-python-blue/30 hover:border-python-yellow/50 transition-all hover:transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">🧠</span>
+                            <h4 class="font-bold text-white text-sm">LLM Learning Platform</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3">Gamified AI learning platform - 5 levels pembelajaran LLM,
+                            VLM, TTS dengan code playground interaktif.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Next.js</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">OpenAI</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Monaco</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://ai-learning-platforms.vercel.app" target="_blank"
+                                class="text-xs text-python-yellow hover:underline">🔗 Demo</a>
+                            <a href="https://github.com/pendtiumpraz/ai-learning-platform" target="_blank"
+                                class="text-xs text-gray-400 hover:text-white">📁 Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Gemini Chatbot -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-4 border border-python-blue/30 hover:border-python-yellow/50 transition-all hover:transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">💬</span>
+                            <h4 class="font-bold text-white text-sm">Gemini Chatbot</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3">Modern chatbot powered by Google Gemini AI dengan
+                            conversational interface dan response streaming.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Next.js</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Gemini</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Streaming</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://gemini-chatbot-hazel-nu.vercel.app" target="_blank"
+                                class="text-xs text-python-yellow hover:underline">🔗 Demo</a>
+                            <a href="https://github.com/pendtiumpraz/gemini-chatbot" target="_blank"
+                                class="text-xs text-gray-400 hover:text-white">📁 Code</a>
+                        </div>
+                    </div>
+
+                    <!-- AI Code Tool -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-4 border border-python-blue/30 hover:border-python-yellow/50 transition-all hover:transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">💻</span>
+                            <h4 class="font-bold text-white text-sm">AI Code Tool</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3">AI-powered coding assistant dengan project management dan
+                            file persistence untuk developer productivity.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Next.js</span>
+                            <span class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">AI</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Editor</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://ai-code-tool.vercel.app" target="_blank"
+                                class="text-xs text-python-yellow hover:underline">🔗 Demo</a>
+                            <a href="https://github.com/pendtiumpraz/ai-code-tool" target="_blank"
+                                class="text-xs text-gray-400 hover:text-white">📁 Code</a>
+                        </div>
+                    </div>
+
+                    <!-- AI For All -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-4 border border-python-blue/30 hover:border-python-yellow/50 transition-all hover:transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">🚀</span>
+                            <h4 class="font-bold text-white text-sm">AI For All</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3">Collection of AI-powered content generation tools - text,
+                            image, dan creative tools untuk semua orang.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Next.js</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Multi-AI</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Tools</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://ai-for-all-sigma.vercel.app" target="_blank"
+                                class="text-xs text-python-yellow hover:underline">🔗 Demo</a>
+                            <a href="https://github.com/pendtiumpraz/AI-for-ALL" target="_blank"
+                                class="text-xs text-gray-400 hover:text-white">📁 Code</a>
+                        </div>
+                    </div>
+
+                    <!-- DeepSeek Book Generator -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-4 border border-python-blue/30 hover:border-python-yellow/50 transition-all hover:transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">📖</span>
+                            <h4 class="font-bold text-white text-sm">DeepSeek Book Generator</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3">AI book generation tool menggunakan DeepSeek untuk
+                            otomatis generate konten buku dari outline.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Next.js</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">DeepSeek</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Content</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://deep-seek-book-generator.vercel.app" target="_blank"
+                                class="text-xs text-python-yellow hover:underline">🔗 Demo</a>
+                            <a href="https://github.com/pendtiumpraz/DeepSeek-Book-Generator" target="_blank"
+                                class="text-xs text-gray-400 hover:text-white">📁 Code</a>
+                        </div>
+                    </div>
+
+                    <!-- STT Project -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-4 border border-python-blue/30 hover:border-python-yellow/50 transition-all hover:transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">🎙️</span>
+                            <h4 class="font-bold text-white text-sm">Speech-to-Text Project</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3">Speech recognition app menggunakan Gemini API untuk
+                            transcription dengan setup automation.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Next.js</span>
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Gemini</span>
+                            <span class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">STT</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://stt-project-drab.vercel.app" target="_blank"
+                                class="text-xs text-python-yellow hover:underline">🔗 Demo</a>
+                            <a href="https://github.com/pendtiumpraz/stt-project" target="_blank"
+                                class="text-xs text-gray-400 hover:text-white">📁 Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide Presentation Generator -->
+                    <div
+                        class="bg-dark-700 rounded-xl p-4 border border-python-blue/30 hover:border-python-yellow/50 transition-all hover:transform hover:scale-[1.02]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-xl">📊</span>
+                            <h4 class="font-bold text-white text-sm">Slide Presentation Generator</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3">AI-powered slide/PPT generator - otomatis membuat
+                            presentasi dari topic atau content outline.</p>
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span
+                                class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">Next.js</span>
+                            <span class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">AI</span>
+                            <span class="text-xs bg-python-blue/20 px-2 py-0.5 rounded text-python-lightBlue">PPT</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://slide-presentation-generator.vercel.app" target="_blank"
+                                class="text-xs text-python-yellow hover:underline">🔗 Demo</a>
+                            <a href="https://github.com/pendtiumpraz/Slide-Presentation-Generator" target="_blank"
+                                class="text-xs text-gray-400 hover:text-white">📁 Code</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- More Projects -->
+                <div class="grid md:grid-cols-4 gap-3 mb-6">
+                    <a href="https://karsa-ai.vercel.app" target="_blank"
+                        class="bg-dark-700/50 p-3 rounded-lg border border-python-blue/20 hover:border-python-yellow/40 transition-colors text-center">
+                        <span class="text-sm">⚖️</span>
+                        <p class="text-xs text-white mt-1">Legal Doc SaaS</p>
+                        <p class="text-xs text-gray-500">AI Legal Platform</p>
+                    </a>
+                    <a href="https://kosan-bay.vercel.app" target="_blank"
+                        class="bg-dark-700/50 p-3 rounded-lg border border-python-blue/20 hover:border-python-yellow/40 transition-colors text-center">
+                        <span class="text-sm">🏠</span>
+                        <p class="text-xs text-white mt-1">Kosan SaaS</p>
+                        <p class="text-xs text-gray-500">Property Manager</p>
+                    </a>
+                    <a href="https://notarsis.vercel.app" target="_blank"
+                        class="bg-dark-700/50 p-3 rounded-lg border border-python-blue/20 hover:border-python-yellow/40 transition-colors text-center">
+                        <span class="text-sm">📝</span>
+                        <p class="text-xs text-white mt-1">Notaris System</p>
+                        <p class="text-xs text-gray-500">Notary Platform</p>
+                    </a>
+                    <a href="https://traveling-ebon.vercel.app" target="_blank"
+                        class="bg-dark-700/50 p-3 rounded-lg border border-python-blue/20 hover:border-python-yellow/40 transition-colors text-center">
+                        <span class="text-sm">✈️</span>
+                        <p class="text-xs text-white mt-1">Travel Apps</p>
+                        <p class="text-xs text-gray-500">Operation Tools</p>
+                    </a>
+                    <a href="https://pondok-digital.vercel.app" target="_blank"
+                        class="bg-dark-700/50 p-3 rounded-lg border border-python-blue/20 hover:border-python-yellow/40 transition-colors text-center">
+                        <span class="text-sm">🕌</span>
+                        <p class="text-xs text-white mt-1">Pondok Digital</p>
+                        <p class="text-xs text-gray-500">Pesantren SaaS</p>
+                    </a>
+                    <a href="https://complete-arabic-lesson.vercel.app" target="_blank"
+                        class="bg-dark-700/50 p-3 rounded-lg border border-python-blue/20 hover:border-python-yellow/40 transition-colors text-center">
+                        <span class="text-sm">📚</span>
+                        <p class="text-xs text-white mt-1">Arabic Lesson</p>
+                        <p class="text-xs text-gray-500">Learning Platform</p>
+                    </a>
+                    <a href="https://toko-digital-one.vercel.app" target="_blank"
+                        class="bg-dark-700/50 p-3 rounded-lg border border-python-blue/20 hover:border-python-yellow/40 transition-colors text-center">
+                        <span class="text-sm">🛒</span>
+                        <p class="text-xs text-white mt-1">Toko Digital</p>
+                        <p class="text-xs text-gray-500">E-commerce</p>
+                    </a>
+                    <a href="https://codementor-hazel.vercel.app" target="_blank"
+                        class="bg-dark-700/50 p-3 rounded-lg border border-python-blue/20 hover:border-python-yellow/40 transition-colors text-center">
+                        <span class="text-sm">👨‍💻</span>
+                        <p class="text-xs text-white mt-1">CodeMentor</p>
+                        <p class="text-xs text-gray-500">AI Tutor</p>
+                    </a>
+                </div>
+
+                <!-- GitHub Stats -->
+                <div
+                    class="p-4 bg-gradient-to-r from-python-blue/20 to-python-yellow/10 rounded-xl border border-python-yellow/30">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <svg class="w-10 h-10 text-python-yellow" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            <div>
+                                <p class="text-2xl font-bold text-white">289+ <span class="text-python-yellow">Public
+                                        Repositories</span></p>
+                                <p class="text-gray-400 text-sm">Active development on AI, SaaS, and automation projects
+                                </p>
+                            </div>
+                        </div>
+                        <a href="https://github.com/pendtiumpraz" target="_blank"
+                            class="bg-python-yellow text-dark-900 px-6 py-2 rounded-lg font-semibold hover:bg-white transition-colors flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            View All Repos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="mb-10 pdf-optimized">
+            <div class="glass-card rounded-2xl p-6">
+                <h3 class="section-header text-2xl font-bold text-python-yellow mb-6 ml-6 font-mono">education</h3>
+
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-python-blue/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-python-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Universitas Negeri Malang</h4>
+                        <p class="text-python-lightBlue">Bachelor's Degree</p>
+                        <p class="text-gray-400 text-sm">East Java, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Highlights -->
+        <section class="mb-10 pdf-optimized">
+            <div class="glass-card rounded-2xl p-6">
+                <h3 class="section-header text-2xl font-bold text-python-yellow mb-6 ml-6 font-mono">highlights</h3>
+
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="text-center p-4 bg-dark-700 rounded-xl">
+                        <div class="text-3xl font-bold text-python-yellow mb-1">8+</div>
+                        <div class="text-gray-400 text-sm">Years Experience</div>
+                    </div>
+                    <div class="text-center p-4 bg-dark-700 rounded-xl">
+                        <div class="text-3xl font-bold text-python-yellow mb-1">150+</div>
+                        <div class="text-gray-400 text-sm">Partner Companies</div>
+                    </div>
+                    <div class="text-center p-4 bg-dark-700 rounded-xl">
+                        <div class="text-3xl font-bold text-python-yellow mb-1">289</div>
+                        <div class="text-gray-400 text-sm">GitHub Repositories</div>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid md:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 p-3 bg-dark-700/50 rounded-lg">
+                        <span class="text-python-yellow">✓</span>
+                        <span class="text-gray-300 text-sm">Experience mentoring juniors (1-2 per project)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-dark-700/50 rounded-lg">
+                        <span class="text-python-yellow">✓</span>
+                        <span class="text-gray-300 text-sm">Agile/Scrum certified (14 sprints experience)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-dark-700/50 rounded-lg">
+                        <span class="text-python-yellow">✓</span>
+                        <span class="text-gray-300 text-sm">Japanese market experience (Portament JP, Gorimaru)</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-dark-700/50 rounded-lg">
+                        <span class="text-python-yellow">✓</span>
+                        <span class="text-gray-300 text-sm">Kartu Prakerja certified instructor</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-6 border-t border-python-blue/30 no-print">
+            <p class="font-mono text-gray-500 text-sm">
+                <span class="text-python-yellow">print</span>(<span class="text-green-400">"Built with Python 🐍
+                    passion"</span>)
+            </p>
+            <p class="text-gray-600 text-xs mt-2">Last updated: January 2026</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Generate particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.opacity = (Math.random() * 0.3 + 0.1).toString();
+                particle.style.background = Math.random() > 0.5 ? '#FFD43B' : '#4B8BBE';
+                container.appendChild(particle);
+            }
+        }
+
+        // Download PDF from clean version without opening new tab
+        async function downloadPDF() {
+            const btn = document.getElementById('pdfBtn');
+            const btnText = document.getElementById('btnText');
+
+            btn.disabled = true;
+            btnText.textContent = '⏳ Loading...';
+
+            try {
+                // Fetch the clean CV HTML
+                const response = await fetch('cv-clean.html');
+                const html = await response.text();
+
+                // Create hidden container
+                const container = document.createElement('div');
+                container.id = 'pdf-container';
+                container.style.cssText = 'position:absolute;left:-9999px;top:0;width:800px;background:#fff;';
+                container.innerHTML = html;
+                document.body.appendChild(container);
+
+                // Find the CV content inside
+                const cvContent = container.querySelector('#cv');
+
+                // Remove the download button from the fetched content
+                const fetchedBtn = container.querySelector('.download-btn');
+                if (fetchedBtn) fetchedBtn.remove();
+
+                btnText.textContent = '⏳ Generating PDF...';
+
+                // Wait for fonts/styles
+                await new Promise(r => setTimeout(r, 300));
+
+                // Generate PDF
+                await html2pdf().set({
+                    margin: 10,
+                    filename: 'Galih_Prasetyo_AI_Engineer_CV.pdf',
+                    image: { type: 'jpeg', quality: 1 },
+                    html2canvas: {
+                        scale: 2,
+                        useCORS: true,
+                        backgroundColor: '#ffffff',
+                        logging: false
+                    },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                }).from(cvContent).save();
+
+                btnText.textContent = '✅ Downloaded!';
+
+            } catch (error) {
+                console.error('PDF Error:', error);
+                btnText.textContent = '❌ Error!';
+            } finally {
+                // Cleanup
+                const container = document.getElementById('pdf-container');
+                if (container) container.remove();
+                btn.disabled = false;
+                setTimeout(() => { btnText.textContent = '📄 Download PDF'; }, 2000);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', createParticles);
+    </script>
+</body>
+
+</html>

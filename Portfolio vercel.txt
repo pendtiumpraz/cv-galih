@@ -1,0 +1,301 @@
+Projects
+
+islamic-ai
+ilmuna.vercel.app
+pendtiumpraz/islamic-ai
+fix: only score ayahs that are actually recited
+12/8/25
+ on
+main
+
+ip-ai
+ip-ai.vercel.app
+pendtiumpraz/ecosystem-IP-ai
+test
+13h ago
+ on
+main
+
+ai-pricing
+ai-pricing-delta.vercel.app
+pendtiumpraz/ai-pricing
+revise
+12/21/25
+ on
+main
+
+ai-code-tool
+ai-code-tool.vercel.app
+pendtiumpraz/ai-code-tool
+feat: add project management with file persistence
+12/6/25
+ on
+main
+
+dobeon
+-d
+igital
+www.dobeon.com
+pendtiumpraz/dobeon-digital
+fix header
+12/16/25
+ on
+main
+
+kosan
+kosan-bay.vercel.app
+pendtiumpraz/kosan
+docs: Update README with comprehensive feature status from requirements
+12/13/25
+ on
+main
+
+traveling
+traveling-ebon.vercel.app
+pendtiumpraz/traveling
+fix: Fix operations manifest form and kanban view improvements
+12/12/25
+ on
+main
+
+lembata-ntt
+lembata-ntt.vercel.app
+pendtiumpraz/lembata-ntt
+Merge pull request #1 from pendtiumpraz/vercel/nextjsreact-flight-rce-vulnera-rl8z4y
+12/9/25
+ on
+main
+
+notari
+s-
+system
+notarsis.vercel.app
+pendtiumpraz/notaris-system
+feat: Add registration, dashboard from DB, and improved messaging
+12/8/25
+ on
+main
+
+islami
+c-ai-pl
+atform
+islamic-ai-platform.vercel.app
+pendtiumpraz/islamic-ai-platform
+Fix Gemini API: use stable model and add API key validation
+12/8/25
+ on
+main
+
+dobeon
+-
+static
+dobeon-static.vercel.app
+pendtiumpraz/dobeon-static
+chore: update next.js to fix security vulnerability
+12/7/25
+ on
+main
+
+imam-s
+yafii-
+blitar
+www.imamsyafiiblitar.com
+pendtiumpraz/imam-syafii-blitar
+Add non-technical update report for Dec 6-7, 2024
+12/7/25
+ on
+main
+
+legal-
+do
+c-saas
+karsa-ai.vercel.app
+pendtiumpraz/legal-doc-saas
+Fix related articles card padding and spacing
+12/5/25
+ on
+main
+
+pm-apps
+pm-apps.vercel.app
+pendtiumpraz/pm-apps
+fix: escape unescaped quotes in JSX to fix ESLint error
+12/2/25
+ on
+main
+
+gemini
+-c
+hatbot
+gemini-chatbot-hazel-nu.vercel.app
+pendtiumpraz/gemini-chatbot
+first commit
+12/4/25
+ on
+main
+
+ai-for-all
+ai-for-all-sigma.vercel.app
+pendtiumpraz/AI-for-ALL
+feat: Add AI-powered content generation tools collection
+11/12/25
+ on
+main
+
+book-g
+en
+erator
+book-generator-ruddy.vercel.app
+pendtiumpraz/Book-Generator
+first commit
+11/15/25
+ on
+main
+
+sari-review
+sari-review.vercel.app
+pendtiumpraz/sari-review
+first commit
+11/30/25
+ on
+main
+
+review
+-safe-trip-k
+emenlu
+review-safe-trip-kemenlu.vercel.app
+pendtiumpraz/review-safe-trip-kemenlu
+first commit
+11/28/25
+ on
+main
+
+dibeli
+-pl
+atform
+yuk.dibeli.my.id
+pendtiumpraz/dibeli-platform
+feat: Redesign store page header and quick actions
+11/12/25
+ on
+main
+stt-project
+stt-project-drab.vercel.app
+pendtiumpraz/stt-project
+FIX: Remove response_mime_type from Gemini API + ADD: Setup automation
+11/22/25
+ on
+main
+trading-apps
+trading-apps-rouge.vercel.app
+pendtiumpraz/trading-apps
+first commit
+11/22/25
+ on
+main
+
+pondok
+-d
+igital
+pondok-digital.vercel.app
+pendtiumpraz/pondok-digital
+Fix role-based login and create specific users for each role
+9/8/25
+ on
+main
+
+toko-digital
+toko-digital-one.vercel.app
+pendtiumpraz/toko-digital-nextjs
+Fix all admin pages and functionalities
+9/29/25
+ on
+main
+
+comple
+te-arabic-
+lesson
+complete-arabic-lesson.vercel.app
+pendtiumpraz/complete-arabic-lesson
+Add comprehensive Arabic learning features: daily conversations, short stories, idioms/proverbs, and prayers
+8/12/25
+ on
+main
+
+ai-lea
+rning-pl
+atform
+ai-learning-platforms.vercel.app
+pendtiumpraz/ai-learning-platform
+fix: Resolve TypeScript errors in agent learning components
+11/4/25
+ on
+main
+
+prompt
+ing-and-canva-tu
+torial
+prompting-and-canva-tutorial.vercel.app
+pendtiumpraz/prompting-and-canva-tutorial
+first commit
+11/12/25
+ on
+main
+
+codementor
+codementor-hazel.vercel.app
+pendtiumpraz/Codementor
+first commit
+11/12/25
+ on
+main
+
+memban
+gun-apps-dalam-s
+emalam
+membangun-apps-dalam-semalam.vercel.app
+pendtiumpraz/membangun-apps-dalam-semalam
+add bonus
+11/12/25
+ on
+main
+
+deep-s
+eek-book-gen
+erator
+deep-seek-book-generator.vercel.app
+pendtiumpraz/DeepSeek-Book-Generator
+first commit
+11/15/25
+ on
+main
+
+code-l
+esson-gen
+erator
+code-lesson-generator.vercel.app
+pendtiumpraz/Code-Lesson-Generator
+first commit
+11/15/25
+ on
+main
+
+slide-
+presentation-gen
+erator
+slide-presentation-generator.vercel.app
+pendtiumpraz/Slide-Presentation-Generator
+first commit
+11/15/25
+ on
+main
+
+medwel
+l
+-front
+medwell-front.vercel.app
+pendtiumpraz/medwell-front
+fix api
+11/7/25
+ on
+main

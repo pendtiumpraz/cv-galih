@@ -1,0 +1,14 @@
+Job Description :
+- Develop a client facing GenAI-Based Chatbot application
+- Ensure the ChatBot are meeting certain Functional metrics (e.g. answer correctness, 99.9% uptime, latency, etc.)
+- The chatbot must be reliable, scalable, secure, maintainable (written in modular way) and following other industry best practices and/or following our tech standards
+- Guide 1 to 2 juniors along the way
+- Work with stakeholders to deliver the projects (Product Owner (PO), Business Partner (BP), Business Unit (BU)) in an agile fashion
+ 
+
+Skills :
+- Python
+- RAG
+- Foundation Model (LLM, Embedding, STT, TTS) General Understanding 
+- FastAPI
+- OpenAPI

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galih Prasetyo - AI Engineer CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #0d1117;
+            color: #e6edf3;
+        }
+
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+        }
+
+        .accent {
+            color: #ffd43b;
+        }
+
+        .accent-blue {
+            color: #58a6ff;
+        }
+
+        .tag {
+            background: #21262d;
+            border: 1px solid #30363d;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+        }
+
+        .tag-primary {
+            background: rgba(255, 212, 59, 0.15);
+            border-color: #ffd43b;
+            color: #ffd43b;
+        }
+
+        @media print {
+            body {
+                background: #0d1117 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .card {
+                background: #161b22 !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 8mm;
+        }
+    </style>
+</head>
+
+<body class="p-6">
+    <!-- Download Button -->
+    <div class="fixed top-4 right-4 no-print z-50">
+        <button onclick="downloadPDF()" id="downloadBtn"
+            class="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-yellow-500 hover:to-yellow-400 hover:text-gray-900 text-white px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 transition-all shadow-lg">
+            <span id="btnIcon">📄</span>
+            <span id="btnText">Download PDF</span>
+        </button>
+    </div>
+
+    <!-- CV Content -->
+    <div id="cv" class="max-w-4xl mx-auto space-y-4">
+
+        <!-- Header -->
+        <div class="card p-6">
+            <div class="flex items-center gap-6">
+                <img src="foto.jpeg" alt="Galih Prasetyo"
+                    class="w-28 h-28 rounded-xl object-cover object-top border-2 border-yellow-400">
+                <div class="flex-1">
+                    <h1 class="text-3xl font-bold"><span class="accent">Galih</span> Prasetyo</h1>
+                    <h2 class="text-lg accent-blue font-semibold mt-1">AI Engineer & LLM Innovator</h2>
+                    <p class="text-gray-400 text-sm mt-2">8+ years in tech • Python • RAG • FastAPI • GenAI Chatbots •
+                        Japan & Indonesia Markets</p>
+                    <div class="flex gap-4 mt-3 text-sm text-gray-400">
+                        <span>📍 East Java, Indonesia</span>
+                        <a href="https://linkedin.com/in/pendtiumpraz" class="hover:text-yellow-400">🔗 LinkedIn</a>
+                        <a href="https://github.com/pendtiumpraz" class="hover:text-yellow-400">💻 289 GitHub Repos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="card p-5">
+            <h3 class="text-lg font-bold accent mb-3"># Skills (Matching Job Requirements)</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="tag tag-primary">Python 🐍</span>
+                <span class="tag tag-primary">RAG</span>
+                <span class="tag tag-primary">FastAPI</span>
+                <span class="tag tag-primary">OpenAPI</span>
+                <span class="tag tag-primary">LLM (GPT-4o, DeepSeek)</span>
+                <span class="tag tag-primary">Chatbot Development</span>
+                <span class="tag">Prompt Engineering</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">AWS</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">GraphQL</span>
+                <span class="tag">React TypeScript</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Playwright</span>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="card p-5">
+            <h3 class="text-lg font-bold accent mb-4"># Experience</h3>
+            <div class="space-y-4">
+                <!-- Exp 1 -->
+                <div class="border-l-2 border-yellow-400 pl-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-white">Full Stack Developer & AI Engineer</h4>
+                            <p class="text-sm accent-blue">PT. Hama Smart Solution</p>
+                        </div>
+                        <span class="text-xs text-gray-500">Aug-Oct 2025</span>
+                    </div>
+                    <ul class="text-sm text-gray-300 mt-2 space-y-1">
+                        <li>• Built WebRPA automation platform serving <strong>150+ Japanese companies</strong> using
+                            Playwright, FastAPI</li>
+                        <li>• Engineered scalable AWS infrastructure (Batch, S3, Lambda) with /19 IP range</li>
+                        <li>• Developed AI-powered scenario validation using DeepSeek for intelligent form filling</li>
+                    </ul>
+                </div>
+                <!-- Exp 2 -->
+                <div class="border-l-2 border-blue-400 pl-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-white">AI Engineer & Prompt Engineer</h4>
+                            <p class="text-sm accent-blue">PT. AICORE Network Solution</p>
+                        </div>
+                        <span class="text-xs text-gray-500">May-Aug 2025</span>
+                    </div>
+                    <ul class="text-sm text-gray-300 mt-2 space-y-1">
+                        <li>• Engineered LINE Bot with GPT-4o VLM for Japan's renovation market - generates 200-500 row
+                            CSV in 60s</li>
+                        <li>• Built AI Workflow Generator translating natural language to complex automations
+                            (n8n-style)</li>
+                        <li>• Developed MCP Server for Opsguide.cloud platform integration</li>
+                    </ul>
+                </div>
+                <!-- Exp 3 -->
+                <div class="border-l-2 border-blue-400 pl-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-white">Product & Curriculum Development + Full-Stack Developer
+                            </h4>
+                            <p class="text-sm accent-blue">Coding First</p>
+                        </div>
+                        <span class="text-xs text-gray-500">Apr-Aug 2025</span>
+                    </div>
+                    <ul class="text-sm text-gray-300 mt-2 space-y-1">
+                        <li>• Built complete LMS with Laravel 12, featuring RBAC for 6 roles</li>
+                        <li>• Automated education systems using RAG and AI Agents for curriculum generation</li>
+                    </ul>
+                </div>
+                <!-- Exp 4 -->
+                <div class="border-l-2 border-gray-600 pl-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-white">Creative Director & Chief AI Engineer</h4>
+                            <p class="text-sm accent-blue">Sainskerta Solusi Nusantara (Own Company)</p>
+                        </div>
+                        <span class="text-xs text-gray-500">Apr 2022 - Present</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mt-2">Leading AI-powered automation and digital solutions company
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="card p-5">
+            <h3 class="text-lg font-bold accent mb-3"># Key Projects (AI/Chatbot Focus)</h3>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-700">
+                    <h4 class="font-semibold text-white text-sm">🤖 WebRPA Automation Platform</h4>
+                    <p class="text-xs text-gray-400 mt-1">High-performance automation for 150+ Japanese companies.
+                        FastAPI + Playwright + AWS</p>
+                </div>
+                <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-700">
+                    <h4 class="font-semibold text-white text-sm">💬 LINE Bot Cost Estimator</h4>
+                    <p class="text-xs text-gray-400 mt-1">GPT-4o VLM analyzing images → 200-500 row CSV in 60 seconds
+                    </p>
+                </div>
+                <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-700">
+                    <h4 class="font-semibold text-white text-sm">⚡ AI Workflow Generator</h4>
+                    <p class="text-xs text-gray-400 mt-1">Text/Image to workflow automation with Interview Agent. MCP
+                        Server</p>
+                </div>
+                <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-700">
+                    <h4 class="font-semibold text-white text-sm">🕌 ILMUNA - Islamic AI</h4>
+                    <p class="text-xs text-gray-400 mt-1">36+ AI learning modules for Quran, Hadith, Fiqh. Next.js +
+                        Gemini</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GitHub Portfolio -->
+        <div class="card p-5">
+            <h3 class="text-lg font-bold accent mb-3"># GitHub Portfolio (289+ Repositories)</h3>
+            <div class="grid grid-cols-3 gap-2 text-center">
+                <a href="https://ip-ai.vercel.app"
+                    class="bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-yellow-400">
+                    <p class="text-xs font-semibold">🎬 MODO Creator</p>
+                    <p class="text-xs text-gray-500">IP AI SaaS</p>
+                </a>
+                <a href="https://ai-learning-platforms.vercel.app"
+                    class="bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-yellow-400">
+                    <p class="text-xs font-semibold">🧠 LLM Learning</p>
+                    <p class="text-xs text-gray-500">Gamified AI</p>
+                </a>
+                <a href="https://gemini-chatbot-hazel-nu.vercel.app"
+                    class="bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-yellow-400">
+                    <p class="text-xs font-semibold">💬 Gemini Chat</p>
+                    <p class="text-xs text-gray-500">Streaming Bot</p>
+                </a>
+                <a href="https://ai-code-tool.vercel.app"
+                    class="bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-yellow-400">
+                    <p class="text-xs font-semibold">💻 AI Code Tool</p>
+                    <p class="text-xs text-gray-500">Dev Assistant</p>
+                </a>
+                <a href="https://deep-seek-book-generator.vercel.app"
+                    class="bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-yellow-400">
+                    <p class="text-xs font-semibold">📖 Book Generator</p>
+                    <p class="text-xs text-gray-500">DeepSeek AI</p>
+                </a>
+                <a href="https://stt-project-drab.vercel.app"
+                    class="bg-gray-800/50 p-2 rounded-lg border border-gray-700 hover:border-yellow-400">
+                    <p class="text-xs font-semibold">🎙️ STT Project</p>
+                    <p class="text-xs text-gray-500">Speech-to-Text</p>
+                </a>
+            </div>
+            <p class="text-center text-xs text-gray-500 mt-3">github.com/pendtiumpraz • All projects deployed on Vercel
+            </p>
+        </div>
+
+        <!-- Education & Highlights -->
+        <div class="grid grid-cols-2 gap-4">
+            <div class="card p-4">
+                <h3 class="font-bold accent mb-2"># Education</h3>
+                <p class="text-sm font-semibold">Universitas Negeri Malang</p>
+                <p class="text-xs text-gray-400">Bachelor's Degree • East Java, Indonesia</p>
+            </div>
+            <div class="card p-4">
+                <h3 class="font-bold accent mb-2"># Highlights</h3>
+                <div class="text-xs text-gray-300 space-y-1">
+                    <p>✓ Mentoring juniors (1-2 per project)</p>
+                    <p>✓ Agile/Scrum (14 sprints experience)</p>
+                    <p>✓ Japan market: Portament JP, Gorimaru</p>
+                    <p>✓ Kartu Prakerja certified instructor</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        async function downloadPDF() {
+            const btn = document.getElementById('downloadBtn');
+            const btnText = document.getElementById('btnText');
+            const btnIcon = document.getElementById('btnIcon');
+
+            btn.disabled = true;
+            btnIcon.textContent = '⏳';
+            btnText.textContent = 'Generating...';
+
+            const element = document.getElementById('cv');
+            document.querySelector('.no-print').style.display = 'none';
+
+            try {
+                await html2pdf().set({
+                    margin: [8, 8, 8, 8],
+                    filename: 'Galih_Prasetyo_AI_Engineer_CV.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: {
+                        scale: 2,
+                        useCORS: true,
+                        backgroundColor: '#0d1117',
+                        logging: false
+                    },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                    pagebreak: { mode: 'avoid-all' }
+                }).from(element).save();
+
+                btnIcon.textContent = '✅';
+                btnText.textContent = 'Downloaded!';
+            } catch (e) {
+                btnIcon.textContent = '❌';
+                btnText.textContent = 'Error!';
+                console.error(e);
+            }
+
+            setTimeout(() => {
+                document.querySelector('.no-print').style.display = 'block';
+                btnIcon.textContent = '📄';
+                btnText.textContent = 'Download PDF';
+                btn.disabled = false;
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
